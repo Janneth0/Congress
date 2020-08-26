@@ -44,7 +44,9 @@ states.forEach(state => {
 function Paint_Table(ide) {
     let table = document.getElementById(ide);
     table.innerHTML = "";
+    table.className="table table-bordered table-hover"
     let thead = document.createElement("thead")
+    thead.className= "thead-dark"
     let tr = document.createElement('tr')
     let th1 = document.createElement('th')
     th1.innerText = "Name";
@@ -53,9 +55,9 @@ function Paint_Table(ide) {
     let th3 = document.createElement('th')
     th3.innerText = "State";
     let th4 = document.createElement('th')
-    th4.innerText = "Seniority";
+    th4.innerText = "Years in Office";
     let th5 = document.createElement('th')
-    th5.innerText = "Porcentage";
+    th5.innerText = "% Votes w/ Party";
 
     tr.appendChild(th1)
     tr.appendChild(th2)

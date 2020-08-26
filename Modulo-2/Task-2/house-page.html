@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>House Table</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Senate Table</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-      <!-- Para navar -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body class="container-fluid">
-    <!-- Header -->
+  <!-- Header -->
   <div class="row">
     <div class="col-sm-4">
 
@@ -28,91 +26,96 @@
       <a href="mailto:info@tgif.net">info@tgif.net</a>
     </div>
   </div>
-    <!-- Naver -->
-    <div class="row">
-        <div class="col-sm-12">
-          <nav class="navbar navbar-inverse">
-            <div class="navbar-header" id="nav_head">
-              <div class="navbar-brand"></div>
-              <a class="navbar-brand" href="#"></a>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-    
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse navbar-expand-lg " id="myNavbar">
-                <ul class="nav navbar-nav">
-                  <li><a href="home-page.html">Home</a></li>
-                  <li class="dropdown active">
-                    <a class="dropdown-toggle " data-toggle="dropdown" href="#">Congress 113<span></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="senate-page.html">Senate</a></li>
-                      <li class="active"><a href="#">House</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
+  <!-- Naver -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-sm-12">
+    <a class="navbar-brand" href="home-page.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Congress 113
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="senate-page.html">Senate</a>
+            <a class="dropdown-item active" href="#">House</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Text-->
+  <div class="row t-center">
+    <div class="text-justify col-sm-7">
+      <h2>Congressmen</h2>
+      <p>The major power of the House is to pass federal legislation that affects the entire country, although its
+        bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law
+        (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber).
+        The
+        House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached
+        officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no
+        majority in the Electoral College.</p>
+      <p>Each U.S. state is represented in the House in proportion to its population as measured in the census,
+        but
+        every state is entitled to at least one representative. </p>
+
+    </div>
+  </div>
+
+  <!-- Filter-Party -->
+  <div class="form-row t-center">
+    <div class="form-group col-sm-6">
+      <div class="form-check form-check-inline">
+        <label>Filter by Party: </label>
+        <label class="form-check-label"><input class="form-check-input" type="checkbox" name="party" value="R" id="R"
+            checked>Republican</label>
+        <label class="form-check-label"><input class="form-check-input" type="checkbox" name="party" value="D" id="D"
+            checked>Democrat</label>
+        <label class="form-check-label"><input class="form-check-input" type="checkbox" name="party" value="ID" id="ID"
+            checked>Independent</label>
       </div>
-    <!--Text-->
-    <div class="row">
-        <div class="col-sm-7">
-            <h2>Congressmen</h2>
-            <p>The major power of the House is to pass federal legislation that affects the entire country, although its
-                bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law
-                (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber).
-                The
-                House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached
-                officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no
-                majority in the Electoral College.</p>
-            <p>Each U.S. state is represented in the House in proportion to its population as measured in the census,
-                but
-                every state is entitled to at least one representative. </p>
 
-        </div>
     </div>
-<!--Table-->
-    <div class="row">
-        <div class="col-12">
-            <table class="table" id="house">
-                <thead>
-                    <tr>
-                        <th> Name </th>
-                        <th> Party </th>
-                        <th> State </th>
-                        <th> Seniority </th>
-                        <th> Porcentage</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
+
+    <div class="form-group col-sm-5">
+      <label for="state-filter">State: </label>
+      <select class="custom-select form-control" id="state-filter">
+        <option value="ALL" selected>--All States--</option>
+      </select>
     </div>
-<!-- Footer -->
-<div class="row">
+  </div>
+  <!--Table-->
+  <div class="row t-center">
+    <div class="col-sm-12">
+      <table class="table" id="house">
+
+      </table>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="card-footer  ">
     <div class="col-12 text-center">
-        <p>© 2016 TGIF | All rights reserved</p>
+      <p>© 2016 TGIF | All rights reserved</p>
     </div>
+  </footer>
+  <!-- JavaScript -->
+  <script src="./script/pro-congress-113-house.js"></script>
+  <script src="script/main.js"></script>
 
-</div>
-    <!-- JavaScript -->
-    <script src="./script/pro-congress-113-house.js"></script>
-    <script src="script/main.js"></script>
-
-    <!--Bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+  <!--Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </body>
 

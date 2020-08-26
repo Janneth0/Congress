@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    width: 100vw;
     font: 16px "Montserrat", sans-serif;
     line-height: 1.8;
 }
@@ -14,16 +16,18 @@ body {
    width: 100%;
 }
 #nav_head{
-    display: none;
+    /* display: none; */
 }
 #mail{
     padding-right: 10%;
-    padding-top: 5%;
-    
+    padding-top: 5%;  
 }
-@media screen and (max-width:500px) {
+.t-center{
+ margin: 2% 5% !important;
+}
+/* @media screen and (max-width:500px) {
     #nav_head{
         display: block;
     }
    
-}
+} */
