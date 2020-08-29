@@ -12,9 +12,13 @@ body {
     #bhgt{
         float: left;
     }
+    /* #mail{
+        font-size: 1rem;
+        background-color: aqua;
+    } */
     }
 
-@media all and (orientation: landscape) {
+@media  all and (orientation: landscape) {
   
     #menu{
         padding-left:0 ;
@@ -23,16 +27,21 @@ body {
     .btn-link {
         color: black;
     }
-    
     #mail{
-        padding-right: 10%;
         padding-top: 5%;  
+        font-size: 1.5rem;
+        justify-content: center;
     }
+    
+    
     .t-center{
      margin: 2% 5% !important;
     }
     .form-check-label, .state-filter{
         padding: 4px;
+    }
+    thead th{
+       text-align: center !important;
     }
     
 }
@@ -40,8 +49,13 @@ body {
 
 
 @media (orientation : portrait)  {
+    #mail{
+        padding-top: 6%;  
+        font-size: 1rem;
+
+    }
     
-   
+
     .table{
 
         font-size: 14px; 
@@ -51,6 +65,9 @@ body {
     footer{
         bottom: 0px;
     }
-    
+    thead th{
+        padding: 3px !important;
+        vertical-align: middle !important;
+    }
    
 }
