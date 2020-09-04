@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Senate Table</title>
+    <title>Senate-Party</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
         integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 
@@ -17,16 +18,16 @@
     <!-- Header -->
     <div class="row">
         <div class="col-sm-5">
-    
-          <a href="#"><img class="img_tgif" src="../img/LOGOTGIF.png" alt="img-logo"></a>
-    
+
+            <a href="#"><img class="img_tgif" src="../img/LOGOTGIF.png" alt="img-logo"></a>
+
         </div>
-    
+
         <div class="col-sm-6 text-right" id="mail">
-          <a href="mailto:info@tgif.net"><i class="far fa-envelope"></i></a>
-          <a href="mailto:info@tgif.net">info@tgif.net</a>
+            <a href="mailto:info@tgif.net"><i class="far fa-envelope"></i></a>
+            <a href="mailto:info@tgif.net">info@tgif.net</a>
         </div>
-      </div>
+    </div>
 
     <!-- Naver -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-sm-12">
@@ -38,12 +39,12 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" active>
                         Congress 113
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item active" href="#">Senate</a>
+                        <a class="dropdown-item " href="#">Senate</a>
                         <a class="dropdown-item" href="./house-page.html">House</a>
                     </div>
                 </li>
@@ -58,23 +59,29 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Party Loyalty
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../party-loyalty/senate-party-loyalty.html">Senate</a>
-                        <a class="dropdown-item" href="../party-loyalty/house-party-loyalty.html">House</a>
+                        <a class="dropdown-item active" href="senate-party-loyalty.html">Senate</a>
+                        <a class="dropdown-item " href="house-party-loyalty.html">House</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-        <!--Table container-->
-        <div>
+    <!--Table container-->
+    <div class="row">
+        <div class="col">
             <h2>Party Loyalty</h2>
-            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
-    	    
+            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans
+                respectively, tend to be the most faithful in voting for their party's nominee for office and
+                legislation that backs their party's agenda. </p>
+
+        </div>
+        <div class="col">
+
             <h2>Senate at a glance</h2>
             <table>
                 <thead>
@@ -103,6 +110,10 @@
                 </tbody>
             </table>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <h2>Least Loyal (Bottom 10% of Party)</h2>
             <table>
                 <thead>
@@ -145,7 +156,8 @@
                     </tr>
                 </tbody>
             </table>
-
+        </div>
+        <div class="col">
             <h2>Most Loyal (Top 10% of Party)</h2>
             <table>
                 <thead>
@@ -195,9 +207,16 @@
             </table>
 
         </div>
-        <!-- JavaScript -->
+    </div>
+    <!-- Footer -->
+    <footer class="card-footer  ">
+        <div class="col-12 text-center">
+            <p>© 2016 TGIF | All rights reserved</p>
+        </div>
+    </footer>
+    <!-- JavaScript -->
     <script src="../script/pro-congress-113-senate.js"></script>
-    <script src="../script/main.js"></script>
+    <script src="../script/statistic.js"></script>
 
     <!--Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -209,6 +228,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    
+
 </body>
+
 </html>
