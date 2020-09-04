@@ -8,8 +8,6 @@ let statistics = {
     avgPVdemocrats: 0,
     avgPVrepublicans: 0,
     avgPVindependents: 0,
-    leastLoyal: [],
-    mostLoyal:[]
 
 }
 
@@ -17,31 +15,49 @@ let statistics = {
 function getPartyMembers(party) {
     return members.filter(member => member.party == party)
 }
+// console.log(members);
+// Array de Democrats,Republicans, Independents
+// for (let i = 0; i < members.length; i++) {
+//     if (members[i].party == "D") {
+//         statistics.democrats.push(members[i])
+//     } else if (members[i].party == "R") {
+//         statistics.republicans.push(members[i])
+//     } else { statistics.independents.push(members[i]) }
+// }
 
 //Promedio
 function avaregePartyVotes(party, key) {
     let sum = 0;
+    // let avg = 0;
+
     party.forEach(function (partyMembers) {
         sum += partyMembers[key];
     });
-    return (sum / party.length || 0).toFixed(2);
+    // for (let i = 0; i < array.length; i++) {
+
+    //     if (document.getElementById(ide) == "attendance") {
+    //         sum += array[i].missed_votes_pct;
+    //     } else {
+    //         sum += array[i].votes_with_party_pct;
+    //     }
+    //     avg = (sum / array.length).toFixed(2);
+    // }
+    return (sum / party.length||0).toFixed(2);
 }
 
-//Least Or Most Loyal
-function leastOrMost(members) {
-    let tenP = Math.round(members.length / 10);//P=11 A=45
 
-    let mSort = [...members];
-    mSort.sort((a, b) => {return  a.votes_with_party_pct - b.votes_with_party_pct});
+statistics.avgPVdemocrats = avaregePartyVotes(statistics.democrats)
+statistics.avgPVrepublicans = avaregePartyVotes(statistics.republicans)
+statistics.avgPVindependents = avaregePartyVotes(statistics.independents)
 
-    let leastTenM = mSort[tenP].votes_with_party_pct;
-    let mostTenM = mSort[mSort.length-tenP].votes_with_party_pct;
+console.log("Array Democrats", statistics.democrats);
+console.log("Array Republicans", statistics.republicans);
+console.log("Array Independents", statistics.independents);
+console.log("Promedio Democratas", statistics.avgPVdemocrats);
+console.log("Promedio Republicanos", statistics.avgPVrepublicans);
+console.log("Promedio Independientes", statistics.avgPVindependents);
 
-    statistics.leastLoyal = mSort.filter(member => member.votes_with_party_pct <= leastTenM);
-    statistics.mostLoyal = mSort.filter(member => member.votes_with_party_pct >= mostTenM);
-    statistics.mostLoyal.reverse();
-}
-leastOrMost(members)
+// 
 
 // tables
 function createGlaceTable() {
@@ -60,8 +76,8 @@ function createGlaceTable() {
             + '<td>' + statistics.independents.length + '</td>'
             + '<td>' + avaregePartyVotes(statistics.independents, "votes_with_party_pct") + '</td>'
             + '</tr>';
-        tbody.innerHTML += '<tr><td>Total</td>'
-            + '<td>' + members.length + '</td>'
+            tbody.innerHTML += '<tr><td>Total</td>'
+            + '<td>' +members.length + '</td>'
             + '<td>' + avaregePartyVotes(members, "votes_with_party_pct") + '</td>'
             + '</tr>';
     } else if (document.getElementById("attendance")) {
@@ -78,7 +94,7 @@ function createGlaceTable() {
             + '<td>' + avaregePartyVotes(statistics.independents, "missed_votes_pct") + '</td>'
             + '</tr>';
         tbody.innerHTML += '<tr><td>Total</td>'
-            + '<td>' + members.length + '</td>'
+            + '<td>' +members.length + '</td>'
             + '<td>' + avaregePartyVotes(members, "missed_votes_pct") + '</td>'
             + '</tr>';
     }
