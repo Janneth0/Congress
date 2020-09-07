@@ -103,3 +103,53 @@ function createGlaceTable() {
 createGlaceTable()
 
 
+
+
+function leastOrMost(members, key) {
+    let tenP = Math.round(members.length / 10);//P=11 A=45
+    if (key == "votes_with_party_pct") {
+        let mSort = [...members];
+        mSort.sort((a, b) => { return a[key] - b[key] });
+
+        let leastTenM = mSort[tenP][key];
+        let mostTenM = mSort[mSort.length - tenP][key];
+
+        statistics.leastLoyal = mSort.filter(
+            member => member[key] <= leastTenM,
+        );
+        statistics.mostLoyal = mSort.filter(member => member[key] >= mostTenM);
+        statistics.mostLoyal.reverse();
+
+        //Mostrar por consola Loyal
+        // console.log("leastloyal");
+        // for (let i = 0; i < tenP; i++) {
+        //     console.log(statistics.leastLoyal[i].votes_with_party_pct)
+        // }
+        // console.log("mostloyal");
+        // for (let i = 0; i < tenP; i++) {
+        //     console.log(statistics.mostLoyal[i].votes_with_party_pct)
+        // }
+    } else {
+        let mSort = [...members];
+        mSort.sort((a, b) => { return a[key] - b[key] });
+
+        let leastTenM = mSort[tenP][key];
+        let mostTenM = mSort[mSort.length - tenP][key];
+
+        statistics.leastMissed = mSort.filter(
+            member => member[key] <= leastTenM,
+        );
+        statistics.mostMissed = mSort.filter(member => member[key] >= mostTenM);
+        statistics.mostMissed.reverse();
+
+        //Mostrar por consola Missed
+        // console.log("leastmissed");
+        // for (let i = 0; i < tenP; i++) {
+        //     console.log(statistics.leastMissed[i].missed_votes_pct)
+        // }
+        // console.log("mostmissed");
+        // for (let i = 0; i < tenP; i++) {
+        //     console.log(statistics.mostMissed[i].missed_votes_pct)
+        // }
+    }
+}
