@@ -11,10 +11,6 @@ document.querySelector("#state-filter").addEventListener("change", verifyPage)
 //  verifyPage()
 //})
 
-
-
-
-
 //Verificacion de Pagina
 function verifyPage() {
     if (document.getElementById("senate")) {
@@ -26,7 +22,7 @@ function verifyPage() {
 verifyPage();
 let states = [];
 for (i = 0; i < members.length; i++) {
-    if (!states.includes(members[i].state) ) {
+    if (!states.includes(members[i].state)) {
         states.push(members[i].state)
     }
 }
@@ -38,18 +34,25 @@ states.forEach(state => {
     option.innerText = state
     document.querySelector("#state-filter").appendChild(option)
 })
-
+// let arrayS= [...members].sort((a,b) => a.votes_with_party_pct - b.votes_with_party_pct)
+// for (let i = 0; i < members.length; i++) {
+//      //P=11 A=45
+//     console.log(i,arrayS[i].first_name,arrayS[i].votes_with_party_pct)    
+// }
+// if(i==45){
+//     console.log("45--------------------- ",45)
+// }
 
 //Agregar Tablas
 function Paint_Table(ide) {
     let table = document.getElementById(ide);
     table.innerHTML = "";
-    table.className="table table-bordered table-hover"
+    table.className = "table table-bordered table-hover text-center"
     let thead = document.createElement("thead")
-    thead.className= "thead-dark"
+    thead.className = "thead-dark"
     let tr = document.createElement('tr')
     let th1 = document.createElement('th')
-    th1.className="center"
+    th1.className = "center"
     th1.innerText = "Name";
     let th2 = document.createElement('th')
     th2.innerText = "Party";
@@ -72,11 +75,11 @@ function Paint_Table(ide) {
     let tbody = document.createElement("tbody")
     let checkedParty = Array.from(document.querySelectorAll("input[name=party]:checked")).map(e => e.value)
 
-    let state=document.querySelector("#state-filter").value;
-  
+    let state = document.querySelector("#state-filter").value;
+
 
     for (let i = 0; i < members.length; i++) {
-        console.log(members[i].states );
+        console.log(members[i].states);
         if (checkedParty.includes(members[i].party) && (state == "ALL" || members[i].state == state)) {
             console.log(members[i].state)
             let tr = document.createElement('tr');
@@ -105,9 +108,6 @@ function Paint_Table(ide) {
             tbody.appendChild(tr)
 
         }
-
-
-
     }
     table.appendChild(tbody)
 

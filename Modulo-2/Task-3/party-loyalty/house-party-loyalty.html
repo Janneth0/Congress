@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>House-Party</title>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../img/icon.png">
 </head>
 <!-- body -->
 
@@ -17,16 +19,16 @@
     <!-- Header -->
     <div class="row">
         <div class="col-sm-5">
-    
-          <a href="#"><img class="img_tgif" src="../img/LOGOTGIF.png" alt="img-logo"></a>
-    
+
+            <a href="#"><img class="img_tgif" src="../img/LOGOTGIF.png" alt="img-logo"></a>
+
         </div>
-    
+
         <div class="col-sm-6 text-right" id="mail">
-          <a href="mailto:info@tgif.net"><i class="far fa-envelope"></i></a>
-          <a href="mailto:info@tgif.net">info@tgif.net</a>
+            <a href="mailto:info@tgif.net"><i class="far fa-envelope"></i></a>
+            <a href="mailto:info@tgif.net">info@tgif.net</a>
         </div>
-      </div>
+    </div>
 
     <!-- Naver -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-sm-12">
@@ -38,28 +40,28 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" active>
+                    <a class="nav-link dropdown-toggle" href="#" id="congressnav" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         Congress 113
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="congressnav">
                         <a class="dropdown-item " href="../congress/senate-page.html">Senate</a>
                         <a class="dropdown-item" href="../congress/house-page.html">House</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle " href="#" id="attendancenav" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Attendance
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="attendancenav">
                         <a class="dropdown-item" href="../attendance/senate-attendance.html">Senate</a>
                         <a class="dropdown-item" href="../attendance/house-attendance.html">House</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Party Loyalty
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -71,12 +73,14 @@
         </div>
     </nav>
 
-        <!--Table container-->
+    <!--Table container-->
     <main class="container" id="loyalty">
         <div class="row">
             <div class="col">
                 <h2>Party Loyalty</h2>
-                <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+                <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans
+                    respectively, tend to be the most faithful in voting for their party's nominee for office and
+                    legislation that backs their party's agenda. </p>
             </div>
             <div class="col">
                 <h2>Senate at a glance</h2>
@@ -88,16 +92,14 @@
                             <th>% Voted with Prty</th>
                         </tr>
                     </thead>
-                    <tbody>
-                       
-                    </tbody>
+                    <tbody></tbody>
                 </table>
-    
+
             </div>
         </div>
         <div class="row">
             <div class="col">
-    
+
                 <h2>Least Loyal <br>(Bottom 10% of Party)</h2>
                 <table class="table table-bordered table-hover" id="least">
                     <thead class="thead-dark">
@@ -107,11 +109,9 @@
                             <th>% Party Votes</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        
-                    </tbody>
+            
                 </table>
-    
+
             </div>
             <div class="col">
                 <h2>Most Loyal<br> (Top 10% of Party)</h2>
@@ -124,21 +124,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                       
+
                     </tbody>
                 </table>
             </div>
         </div>
     </main>
-        
-     
-        <!-- Footer -->
-  <footer class="card-footer  ">
-    <div class="col-12 text-center">
-      <p>© 2016 TGIF | All rights reserved</p>
-    </div>
-  </footer>
-        <!-- JavaScript -->
+
+
+    <!-- Footer -->
+    <footer class="card-footer  ">
+        <div class="col-12 text-center">
+            <p>© 2016 TGIF | All rights reserved</p>
+        </div>
+    </footer>
+    <!-- JavaScript -->
     <script src="../script/pro-congress-113-house.js"></script>
     <script src="../script/statistic.js"></script>
 
@@ -152,6 +152,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-   
+
 </body>
+
 </html>
