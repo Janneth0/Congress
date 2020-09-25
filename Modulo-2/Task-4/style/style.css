@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    width: 100vw;
+    font: 16px "Montserrat", sans-serif;
+    line-height: 1.8;
+}
+.img_tgif{
+    width: 100%;
+ }
+
+ @media (max-width:860px){
+    #bhgt{
+        float: left;
+    }
+    }
+
+@media all and (orientation: landscape) {
+  
+    #menu{
+        padding-left:0 ;
+        padding-right: 0;
+    }
+    .btn-link {
+        color: black;
+    }
+    
+    #mail{
+        padding-top: 5%;  
+        font-size: 1.5rem;
+    
+    }
+    .t-center{
+     margin: 2% 5% !important;
+    }
+    .form-check-label, .state-filter{
+        padding: 4px;
+    }
+    
+}
+
+
+@media (orientation : portrait)  {
+    #mail{
+        padding-top: 6%;  
+        font-size: 1rem;
+    }
+    
+
+   
+    .table{
+
+        font-size: 14px; 
+        vertical-align:middle; 
+        text-align: center;
+    }
+    footer{
+        bottom: 0px;
+    }
+    
+   
+}

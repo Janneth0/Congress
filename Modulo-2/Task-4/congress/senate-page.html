@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Senate</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../img/icon.png">
+</head>
+<!-- body -->
+
+<body class="container-fluid">
+    <div id="app">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-sm-5">
+
+                <a href="#"><img class="img_tgif" src="../img/LOGOTGIF.png" alt="img-logo"></a>
+
+            </div>
+
+            <div class="col-sm-6 text-right" id="mail">
+                <a href="mailto:info@tgif.net"><i class="far fa-envelope"></i></a>
+                <a href="mailto:info@tgif.net">info@tgif.net</a>
+            </div>
+        </div>
+
+        <!-- Naver -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-sm-12">
+            <a class="navbar-brand" href="../home-page.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="Congressnav" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Congress 113
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="Congressnav">
+                            <a class="dropdown-item active" href="#">Senate</a>
+                            <a class="dropdown-item" href="house-page.html">House</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="attendancenav" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Attendance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="attendancenav">
+                            <a class="dropdown-item" href="../attendance/senate-attendance.html">Senate</a>
+                            <a class="dropdown-item" href="../attendance/house-attendance.html">House</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Party Loyalty
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../party-loyalty/senate-party-loyalty.html">Senate</a>
+                            <a class="dropdown-item" href="../party-loyalty/house-party-loyalty.html">House</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Text-->
+        <div class="row t-center">
+            <div class="text-justify col-sm-12">
+                <h2>Senators</h2>
+                <p>First convened in 1789, the composition and powers of the Senate are established in Article One of
+                    the
+                    U.S.
+                    Constitution. Each state is represented by two senators, regardless of population, who serve
+                    staggered
+                    six-year terms. The Senate has several exclusive powers not granted to the House, including
+                    consenting
+                    to
+                    treaties as a precondition to their ratification and consenting to or confirming appointments of
+                    Cabinet
+                    secretaries, federal judges, other federal executive officials, military officers, regulatory
+                    officials,
+                    ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached
+                    by
+                    the
+                    House.</p>
+            </div>
+        </div>
+
+        <!-- Filter-Party -->
+        <div class="form-row t-center ">
+            <div class="form-group col-sm-6">
+                <div class="form-check form-check-inline">
+                    <label>Filter by Party: </label>
+                    <label class="form-check-label"><input class="form-check-input" type="checkbox" name="party"
+                            value="R" id="R"  v-model="checkedParty" >Republican</label>
+                    <label class="form-check-label"><input class="form-check-input" type="checkbox" name="party"
+                            value="D" id="D"  v-model="checkedParty" >Democrat</label>
+                    <label class="form-check-label"><input class="form-check-input" type="checkbox" name="party"
+                            value="ID" id="ID" v-model="checkedParty" >Independent</label>
+                </div>
+
+            </div>
+
+            <div class="form-group col-sm-5">
+                <label for="state-filter">State: </label>
+                <select class="custom-select form-control" id="state-filter" v-model="allselectedState">
+                    <option value="All" selected>--All States--</option>
+                    <option v-for="state in states" v-bind:value="state" >{{state}}</option>
+                </select>
+            </div>
+        </div>
+
+        <!--TABLE-->
+        <div class="row t-center" id="t-text">
+            <!-- <div class="col-sm-11"> -->
+            <table class="table table-bordered table-hover text-center col-sm-11" id="senate">
+                <thead class="thead-dark">
+                    <th>Full name</th>
+                    <th>party</th>
+                    <th>State</th>
+                    <th>Years in office</th>
+                    <th> % votes with party</th>
+                </thead>
+                <tbody>
+                    <tr v-for="member in memberFiltered">
+                        <td><a v-bind:href="member.url"> {{member.first_name}} {{member.middle_name || ""}} {{member.last_name}}</a></td>
+                        <td>{{member.party}}</td>
+                        <td>{{member.state}}</td>
+                        <td>{{member.seniority}}</td>
+                        <td>{{member.missed_votes_pct}} %</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- </div> -->
+        </div>
+        <!-- Footer -->
+        <footer class="card-footer ">
+            <div class="col-sm-12 text-center">
+                <p>© 2020 TGIF | All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScript -->
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../script/main.js"></script>
+
+</body>
+
+</html>
