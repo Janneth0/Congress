@@ -74,7 +74,7 @@
     </nav>
 
     <!--Table container-->
-    <main class="container" id="loyalty">
+    <main class="container" id="app">
         <div class="row">
             <div class="col">
                 <h2>Party Loyalty</h2>
@@ -92,7 +92,29 @@
                             <th>% Voted with Prty</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <td>Republicans</td>
+                            <td>{{statistics.republicans.length}}</td>
+                            <td>{{avaregeVotes(statistics.republicans,"votes_with_party_pct")}}%</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Democrats</td>
+                            <td>{{statistics.democrats.length}}</td>
+                            <td>{{avaregeVotes(statistics.democrats,"votes_with_party_pct")}}%</td>
+                        </tr>
+                        <tr>
+                            <td>Independent</td>
+                            <td>{{statistics.independents.length}}</td>
+                            <td>{{avaregeVotes(statistics.independents,"votes_with_party_pct")}}%</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>{{members.length}}</td>
+                            <td>{{avaregeVotes(members,"votes_with_party_pct")}}%</td>
+                        </tr>
+                      </tbody>
                 </table>
 
             </div>

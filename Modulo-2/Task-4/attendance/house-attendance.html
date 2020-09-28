@@ -16,6 +16,7 @@
 <!-- body -->
 
 <body class="container-fluid" id="house">
+    <div id="app">
     <!-- Header -->
     <div class="row">
         <div class="col-sm-5">
@@ -105,8 +106,28 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                    </tbody>
+                        <tr>
+                            <td>Republicans</td>
+                            <td>{{statistics.republicans.length}}</td>
+                            <td>{{avaregeVotes(statistics.republicans,"missed_votes_pct")}}%</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Democrats</td>
+                            <td>{{statistics.democrats.length}}</td>
+                            <td>{{avaregeVotes(statistics.democrats,"missed_votes_pct")}}%</td>
+                        </tr>
+                        <tr>
+                            <td>Independent</td>
+                            <td>{{statistics.independents.length}}</td>
+                            <td>{{avaregeVotes(statistics.independents,"missed_votes_pct")}}%</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>{{members.length}}</td>
+                            <td>{{avaregeVotes(members,"missed_votes_pct")}}%</td>
+                        </tr>
+                      </tbody>
                 </table>
 
             </div>
@@ -148,7 +169,7 @@
         </div>
     </footer>
 
-
+</div>
     <!--Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

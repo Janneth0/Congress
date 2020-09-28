@@ -109,8 +109,28 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                    </tbody>
+                        <tr>
+                            <td>Republicans</td>
+                            <td>{{statistics.republicans.length}}</td>
+                            <td>{{avaregeVotes(statistics.republicans,"missed_votes_pct")}}%</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Democrats</td>
+                            <td>{{statistics.democrats.length}}</td>
+                            <td>{{avaregeVotes(statistics.democrats,"missed_votes_pct")}}%</td>
+                        </tr>
+                        <tr>
+                            <td>Independent</td>
+                            <td>{{statistics.independents.length}}</td>
+                            <td>{{avaregeVotes(statistics.independents,"missed_votes_pct")}}%</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>{{members.length}}</td>
+                            <td>{{avaregeVotes(members,"missed_votes_pct")}}%</td>
+                        </tr>
+                      </tbody>
                 </table>
 
             </div>
@@ -167,7 +187,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="../script/main.js"></script>
+        <script src="../script/main.js"></script>
 
 </body>
 
