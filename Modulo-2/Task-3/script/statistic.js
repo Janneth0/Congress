@@ -1,3 +1,5 @@
+let members = data.results[0].members;
+
 let statistics = {
     //Cantidad de Miembros por Party
     democrats: getPartyMembers("D"),
