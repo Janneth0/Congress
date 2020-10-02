@@ -40,17 +40,17 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" id="congressnav" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" id="congressnav" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Congress 113
                     </a>
                     <div class="dropdown-menu" aria-labelledby="congressnav">
-                        <a class="dropdown-item " href="#">Senate</a>
-                        <a class="dropdown-item" href="./house-page.html">House</a>
+                        <a class="dropdown-item " href="../congress/senate-page.html">Senate</a>
+                        <a class="dropdown-item" href="../congress/house-page.html">House</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="attendancenav" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle " href="#" id="attendancenav" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Attendance
                     </a>
@@ -65,13 +65,14 @@
                         Party Loyalty
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item active" href="senate-party-loyalty.html">Senate</a>
+                        <a class="dropdown-item active" href="">Senate</a>
                         <a class="dropdown-item " href="house-party-loyalty.html">House</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+
     <!--Table container-->
     <main class="conatainer" id="app">
         <div class="row">
@@ -123,7 +124,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2>Least Loyal<br> (Bottom 10% of Party)</h2>
-                <table class="table table-bordered table-hover" id="least">
+                <table class="table table-bordered table-hover text-center" id="least">
                     <thead class="thead-dark">
                         <tr>
                             <th>Name</th>
@@ -140,7 +141,7 @@
             </div>
             <div class="col-sm-6">
                 <h2>Most Loyal <br>(Top 10% of Party)</h2>
-                <table class="table table-bordered table-hover" id="most">
+                <table class="table table-bordered table-hover text-center" id="most">
                     <thead class="thead-dark">
                         <tr>
                             <th>Name</th>
@@ -156,15 +157,16 @@
                 </table>
 
             </div>
+            
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="card-footer  ">
         <div class="col-12 text-center">
-            <p>© 2016 TGIF | All rights reserved</p>
+          <p>© 2020 TGIF | All rights reserved</p>
         </div>
-    </footer>
+      </footer>
 
     <!--Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
