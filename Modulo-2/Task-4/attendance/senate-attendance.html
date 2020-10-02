@@ -150,27 +150,12 @@
                             </tr>
                         </thead>
                         <template v-if="members.length > 0">
-                            <stast-table v-bind:members="members" prop1="missed_votes_pct" prop2="missed_votes" asc="true">
+                            <stast-table v-bind:members="members" prop1="missed_votes_pct" prop2="missed_votes" v-bind:asc=true
+                            >
                             </stast-table>
-                            <!-- <stats-table v-bind:members="members" prop2="missed_votes" prop1="missed_votes_pct" 
-                                    least-or-most="least" type="Number of Missed Votes" ptc="% Missed">
-                        </stats-table> -->
                         </template>
-
-                        <!-- <template v-if="members.length > 0">
-                        <stats-table v-bind:members="members" prop2="missed_votes" prop1="missed_votes_pct" 
-                                    least-or-most="least" type="Number of Missed Votes" ptc="% Missed">
-                        </stats-table>
-                        </template>
-                    <tbody>
-                        <tr v-for="member in leastMissed">
-                            <td>{{member.first_name}} {{(member.middle_name || '')}} {{member.last_name}}</td>
-                            <td>{{member.missed_votes}}</td>
-                            <td>{{member.missed_votes_pct}}%</td>
-                        </tr>
-                    </tbody> -->
                     </table>
-                    
+
 
 
                     </stast-table>
@@ -185,13 +170,13 @@
                                 <th>% Missed</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!-- <tr v-for="member in mostMissed">
-                            <td>{{members.first_name}} {{(member.middle_name || '')}} {{member.last_name}}</td>
-                            <td>{{member.missed_votes}}</td>
-                            <td>{{member.missed_votes_pct}}%</td>
-                        </tr> -->
-                        </tbody>
+
+                        <template v-if="members.length > 0">
+                            <stast-table v-bind:members="members" prop1="missed_votes_pct" prop2="missed_votes" v-bind:asc=false
+                            >
+                            </stast-table>
+                        </template>
+
                     </table>
                 </div>
 

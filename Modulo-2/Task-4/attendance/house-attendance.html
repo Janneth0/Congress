@@ -144,6 +144,11 @@
                             <th>%Missed</th>
                         </tr>
                     </thead>
+                    <template v-if="members.length > 0">
+                        <stast-table v-bind:members="members" prop1="missed_votes_pct" prop2="missed_votes" v-bind:asc=true
+                        >
+                        </stast-table>
+                    </template>
                 </table>
             </div>
             <div class=" col-12 col-md-6">
@@ -156,6 +161,11 @@
                             <th>%Missed</th>
                         </tr>
                     </thead>
+                    <template v-if="members.length > 0">
+                        <stast-table v-bind:members="members" prop1="missed_votes_pct" prop2="missed_votes" v-bind:asc=false
+                        >
+                        </stast-table>
+                    </template>
                 </table>
             </div>
         </div>

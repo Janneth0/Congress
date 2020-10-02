@@ -131,6 +131,11 @@
                             <th>% Party Votes</th>
                         </tr>
                     </thead>
+                    <template v-if="members.length > 0">
+                        <stast-table v-bind:members="members" prop1="votes_with_party_pct" prop2="total_votes" v-bind:asc=true
+                        >
+                        </stast-table>
+                    </template>
                 </table>
             </div>
             <div class="col-sm-6">
@@ -143,9 +148,11 @@
                             <th>% Party Votes</th>
                         </tr>
                     </thead>
-                    <tbody>
-
-                    </tbody>
+                    <template v-if="members.length > 0">
+                        <stast-table v-bind:members="members" prop1="votes_with_party_pct" prop2="total_votes" v-bind:asc=false
+                        >
+                        </stast-table>
+                    </template>
                 </table>
 
             </div>
